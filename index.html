@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo Mágico de RPG Avançado</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        input, select, button { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Duelo Mágico de RPG Avançado</h1>
+    <div id="criacao-personagem">
+        <h2>Crie seu Personagem</h2>
+        <input type="text" id="nome" placeholder="Nome do Personagem">
+        <select id="classe">
+            <option value="Guerreiro">Guerreiro</option>
+            <option value="Mago">Mago</option>
+            <option value="Ladino">Ladino</option>
+        </select>
+        <p>Distribua 150 pontos entre os atributos:</p>
+        <input type="number" id="vida" placeholder="Vida" min="1" max="148">
+        <input type="number" id="agilidade" placeholder="Agilidade" min="1" max="148">
+        <input type="number" id="poder" placeholder="Poder" min="1" max="148">
+        <p id="pontos-restantes">Pontos restantes: 150</p>
+        <button onclick="criarPersonagem()">Criar Personagem</button>
+    </div>
+    <div id="duelo" style="display:none;">
+        <h2>Duelo</h2>
+        <button onclick="iniciarDuelo()">Iniciar Duelo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
